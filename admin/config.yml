@@ -154,6 +154,10 @@ collections:
         fields:
           - { label: "Organisation name", name: "siteName", widget: "string" }
           - { label: "Website address (no trailing slash)", name: "siteUrl", widget: "string" }
+          - { label: "Registered business name (as on the CAC certificate)", name: "legalName", widget: "string" }
+          - { label: "Registered with", name: "registrationBody", widget: "string" }
+          - { label: "Registration number", name: "registrationNumber", widget: "string", hint: "Shown in the website footer. Clear all four registration fields to hide that line." }
+          - { label: "Registered address", name: "registeredAddress", widget: "string" }
           - { label: "Tagline", name: "tagline", widget: "string" }
           - { label: "Top banner text", name: "announcementText", widget: "string" }
           - { label: "Top banner link text", name: "announcementLinkText", widget: "string" }
@@ -162,11 +166,11 @@ collections:
           - label: "Phone number (for tap-to-call, no spaces)"
             name: "phoneLink"
             widget: "string"
-            hint: "e.g. +441234567890"
+            hint: "e.g. +2348012345678"
           - label: "WhatsApp number (digits only, country code, no +)"
             name: "whatsappNumber"
             widget: "string"
-            hint: "e.g. 447123456789"
+            hint: "e.g. 2348012345678"
           - { label: "Default WhatsApp message", name: "whatsappMessage", widget: "text" }
           - { label: "Location text shown in the footer", name: "location", widget: "string" }
           - label: "Contact form endpoint (from formspree.io)"

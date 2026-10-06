@@ -34,7 +34,8 @@
   "description": "Social development & business consultancy supporting startups, emerging organisations and growing businesses.",
   "url": "{{ site.siteUrl }}/",
   "email": "{{ site.email }}",
-  "areaServed": "United Kingdom"
+  "areaServed": "Nigeria",
+  "legalName": "{{ site.legalName }}"
 }
 </script>
 {% endif %}
@@ -122,6 +123,9 @@
         </ul>
       </div>
     </div>
+    {% if site.registrationNumber %}
+    <p style="font-size:.78rem;color:#7f93b3;margin:0 0 18px;line-height:1.6">Registered business name: {{ site.legalName }} · {{ site.registrationBody }} · {{ site.registrationNumber }}<br>Registered address: {{ site.registeredAddress }}</p>
+    {% endif %}
     <div class="footer-bottom">
       <p>© <span data-year></span> {{ site.siteName }}. All rights reserved.</p>
       <div class="legal-links">
