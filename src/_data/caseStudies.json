@@ -1,0 +1,39 @@
+{
+  "caseStudies": [
+    {
+      "title": "An early-stage social enterprise gets funding-ready",
+      "situation": "A community food initiative had a strong mission and loyal volunteers, but no formal business or impact plan — which was starting to block funding applications.",
+      "approach": "From Idea to Action programme, combining Business Planning and Social Development services over six weeks.",
+      "quote": "We finally had a plan that matched how seriously we took the mission.",
+      "results": [
+        { "stat": "6 wks", "label": "from first session to a funding-ready plan" },
+        { "stat": "3", "label": "funding applications submitted using the new plan" },
+        { "stat": "1", "label": "theory of change document the team still uses" }
+      ],
+      "isIllustrative": true
+    },
+    {
+      "title": "A growing training company restructures around clarity",
+      "situation": "A 12-person training provider had grown quickly, but roles had blurred, deadlines were slipping, and decisions bottlenecked around the founder.",
+      "approach": "Organisational Development combined with the Organisation Growth Accelerator programme.",
+      "quote": "We stopped firefighting and started running the business on purpose.",
+      "results": [
+        { "stat": "4", "label": "clearly defined leadership roles introduced" },
+        { "stat": "90 days", "label": "to a working growth roadmap with quarterly milestones" },
+        { "stat": "1", "label": "documented decision-making process replacing informal habits" }
+      ],
+      "isIllustrative": true
+    },
+    {
+      "title": "A volunteer-led initiative starts measuring its impact",
+      "situation": "A community mentoring group had been running informally for two years and wanted to show funders and partners the difference it was making.",
+      "approach": "Social Impact Development programme, including a needs assessment and outcome measurement framework.",
+      "quote": "For the first time we could actually show our numbers, not just tell our story.",
+      "results": [
+        { "stat": "1", "label": "outcome measurement framework built from scratch" },
+        { "stat": "2", "label": "new partnership conversations opened using the results" }
+      ],
+      "isIllustrative": true
+    }
+  ]
+}

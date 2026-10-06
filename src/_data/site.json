@@ -1,0 +1,21 @@
+{
+  "siteName": "Rhemroyal Services",
+  "siteUrl": "https://www.rhemroyalservices.com",
+  "tagline": "Clarity for today. Growth for tomorrow.",
+  "announcementText": "Free 20-minute discovery call for new enquiries —",
+  "announcementLinkText": "book yours today",
+  "email": "hello@rhemroyalservices.com",
+  "phoneDisplay": "+44 (0) REPLACE",
+  "phoneLink": "+44REPLACE",
+  "whatsappNumber": "REPLACE_WITH_WHATSAPP_NUMBER",
+  "whatsappMessage": "Hello Rhemroyal Services, I'd like to find out more about your consultancy support.",
+  "location": "South Yorkshire, United Kingdom — remote and in-person",
+  "contactFormEndpoint": "https://formspree.io/f/REPLACE_WITH_FORM_ID",
+  "newsletterFormEndpoint": "https://formspree.io/f/REPLACE_WITH_NEWSLETTER_FORM_ID",
+  "social": {
+    "facebook": "https://www.facebook.com/share/1BhRJoMs1a/?mibextid=wwXIfr",
+    "instagram": "#",
+    "linkedin": "#",
+    "x": "#"
+  }
+}

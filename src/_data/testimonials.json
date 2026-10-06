@@ -1,0 +1,25 @@
+{
+  "testimonials": [
+    {
+      "quote": "We had a strong idea but no structure around it. Rhemroyal helped us turn a notebook of plans into an operating model we could actually follow.",
+      "name": "Founder",
+      "role": "Early-stage startup",
+      "initial": "A",
+      "isPlaceholder": true
+    },
+    {
+      "quote": "The coaching sessions gave our team the confidence to make decisions faster and stop second-guessing every step.",
+      "name": "Team Lead",
+      "role": "Community organisation",
+      "initial": "T",
+      "isPlaceholder": true
+    },
+    {
+      "quote": "Rhemroyal didn't just hand us a report. They stayed with us through implementation, which is exactly what we needed.",
+      "name": "Director",
+      "role": "Growing social enterprise",
+      "initial": "O",
+      "isPlaceholder": true
+    }
+  ]
+}

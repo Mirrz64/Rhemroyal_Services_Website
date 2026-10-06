@@ -1,0 +1,53 @@
+---
+layout: layouts/base.njk
+title: "Blog"
+description: "Practical articles on business planning, organisational development and social impact from the Rhemroyal Services team."
+navActive: blog
+permalink: "blog.html"
+---
+<div class="container breadcrumb"><a href="/index.html">Home</a><span>/</span>Blog</div>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">BLOG</span>
+    <h1>Practical thinking on strategy, planning and growth.</h1>
+    <p class="lede">Short, usable articles — no jargon, no filler.</p>
+  </div>
+</section>
+
+<section class="section white">
+  <div class="container">
+    <div class="blog-grid">
+      {% for post in collections.posts %}
+      <article class="blog-card">
+        <a class="blog-card-link" href="{{ post.url }}">
+          <div class="blog-card-media {{ 'alt' if loop.index0 == 1 else ('alt2' if loop.index0 == 2 else '') }}"></div>
+          <div class="blog-card-body">
+            <div class="blog-tag">{{ post.data.tag }}</div>
+            <h3>{{ post.data.title }}</h3>
+            <p>{{ post.data.description }}</p>
+            <div class="blog-meta"><span>{{ post.data.readTime }} min read</span></div>
+          </div>
+        </a>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section-sm pale">
+  <div class="container">
+    <div class="newsletter">
+      <div class="newsletter-copy">
+        <h3>New articles straight to your inbox</h3>
+        <p>Occasional insights on strategy, planning and organisational growth. No spam, unsubscribe any time.</p>
+      </div>
+      <form class="newsletter-form" data-remote-form="newsletterFormEndpoint" data-success-message="Thanks for subscribing — look out for our next update.">
+        <label class="sr-only" for="newsletter-email-blog">Email address</label>
+        <input type="email" id="newsletter-email-blog" name="email" placeholder="you@example.com" required />
+        <button type="submit" class="btn btn-orange">Subscribe</button>
+      </form>
+    </div>
+    <p class="form-status" aria-live="polite"></p>
+  </div>
+</section>

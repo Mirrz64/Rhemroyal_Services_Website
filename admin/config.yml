@@ -1,0 +1,185 @@
+backend:
+  name: github
+  repo: Mirrz64/Rhemroyal_Services_Website
+  branch: main
+  base_url: https://REPLACE_WITH_WORKER_NAME.workers.dev
+
+# Where uploaded images/files land, and the URL path used to reference them
+media_folder: "/src/assets/uploads"
+public_folder: "/assets/uploads"
+
+# Edits save straight to `main` and trigger an automatic Cloudflare redeploy.
+# Switch to editorial_workflow instead if you'd rather review drafts before
+# they go live (adds a "Save as draft" / "Ready for review" step).
+publish_mode: simple
+
+collections:
+  # ---------------------------------------------------------------
+  # Blog posts — add, edit, unpublish articles
+  # ---------------------------------------------------------------
+  - name: "blog"
+    label: "Blog Posts"
+    label_singular: "Blog Post"
+    folder: "src/blog"
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    extension: "md"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Summary (shown on the blog list page)", name: "description", widget: "text" }
+      - label: "Category"
+        name: "tag"
+        widget: "select"
+        options: ["BUSINESS PLANNING", "ORGANISATIONAL DEVELOPMENT", "SOCIAL DEVELOPMENT", "COACHING & TRAINING", "GROWTH SUPPORT"]
+      - { label: "Read time (minutes)", name: "readTime", widget: "number", valueType: "int", min: 1, max: 30, default: 5 }
+      - { label: "Publish date", name: "date", widget: "datetime" }
+      - { label: "Call-to-action heading (box at the bottom of the article)", name: "ctaHeading", widget: "string", required: false }
+      - { label: "Call-to-action text", name: "ctaText", widget: "text", required: false }
+      - { label: "Article content", name: "body", widget: "markdown" }
+
+  # ---------------------------------------------------------------
+  # Testimonials — shown on the homepage
+  # ---------------------------------------------------------------
+  - name: "testimonials"
+    label: "Testimonials"
+    files:
+      - name: "testimonials"
+        label: "Testimonials"
+        file: "src/_data/testimonials.json"
+        fields:
+          - label: "Testimonials"
+            name: "testimonials"
+            widget: "list"
+            label_singular: "Testimonial"
+            summary: "{{name}} — {{role}}"
+            fields:
+              - { label: "Quote", name: "quote", widget: "text" }
+              - { label: "Name (or role, if they prefer not to be named)", name: "name", widget: "string" }
+              - { label: "Their role / organisation type", name: "role", widget: "string" }
+              - { label: "Initial shown in the avatar circle", name: "initial", widget: "string", pattern: ["^.{1,2}$", "One or two characters"] }
+              - label: "This is still a sample, not a real quote"
+                name: "isPlaceholder"
+                widget: "boolean"
+                default: true
+                hint: "Untick once this is a genuine client testimonial — it removes the orange 'Sample testimonial' tag."
+
+  # ---------------------------------------------------------------
+  # Team members — shown on the About page
+  # ---------------------------------------------------------------
+  - name: "team"
+    label: "Team"
+    files:
+      - name: "team"
+        label: "Team Members"
+        file: "src/_data/team.json"
+        fields:
+          - label: "Team members"
+            name: "team"
+            widget: "list"
+            label_singular: "Team member"
+            summary: "{{name}}"
+            fields:
+              - { label: "Name or job title to display", name: "name", widget: "string" }
+              - { label: "Role", name: "role", widget: "string" }
+              - { label: "Short bio", name: "bio", widget: "text" }
+              - { label: "Photo", name: "photo", widget: "image", required: false, hint: "Leave empty to show plain initials instead." }
+              - { label: "Initials (used only if no photo is set)", name: "initials", widget: "string", pattern: ["^.{1,3}$", "Up to 3 characters"] }
+
+  # ---------------------------------------------------------------
+  # Case studies — shown on the Case Studies page
+  # ---------------------------------------------------------------
+  - name: "case_studies"
+    label: "Case Studies"
+    files:
+      - name: "case_studies"
+        label: "Case Studies"
+        file: "src/_data/caseStudies.json"
+        fields:
+          - label: "Case studies"
+            name: "caseStudies"
+            widget: "list"
+            label_singular: "Case study"
+            summary: "{{title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Situation (the client's starting point)", name: "situation", widget: "text" }
+              - { label: "Approach (what Rhemroyal did)", name: "approach", widget: "text" }
+              - { label: "Client quote", name: "quote", widget: "string" }
+              - label: "Results"
+                name: "results"
+                widget: "list"
+                label_singular: "Result"
+                summary: "{{stat}} — {{label}}"
+                fields:
+                  - { label: "Number / stat", name: "stat", widget: "string" }
+                  - { label: "What it means", name: "label", widget: "string" }
+              - label: "This is still an illustrative example, not a real client"
+                name: "isIllustrative"
+                widget: "boolean"
+                default: true
+                hint: "Untick once this describes a genuine client engagement (with their permission) — it removes the 'ILLUSTRATIVE EXAMPLE' tag."
+
+  # ---------------------------------------------------------------
+  # Downloadable resources — shown on the Resources page
+  # ---------------------------------------------------------------
+  - name: "resources"
+    label: "Downloadable Resources"
+    files:
+      - name: "resources"
+        label: "Resources"
+        file: "src/_data/resources.json"
+        fields:
+          - label: "Resources"
+            name: "resources"
+            widget: "list"
+            label_singular: "Resource"
+            summary: "{{title}}"
+            fields:
+              - { label: "Small label above the title (e.g. TEMPLATE · WORD DOCUMENT)", name: "type", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Button text", name: "buttonLabel", widget: "string", default: "Download" }
+              - { label: "File to download", name: "file", widget: "file" }
+
+  # ---------------------------------------------------------------
+  # Site settings — contact details, WhatsApp, social links
+  # ---------------------------------------------------------------
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - name: "general"
+        label: "Contact & Site Settings"
+        file: "src/_data/site.json"
+        fields:
+          - { label: "Organisation name", name: "siteName", widget: "string" }
+          - { label: "Website address (no trailing slash)", name: "siteUrl", widget: "string" }
+          - { label: "Tagline", name: "tagline", widget: "string" }
+          - { label: "Top banner text", name: "announcementText", widget: "string" }
+          - { label: "Top banner link text", name: "announcementLinkText", widget: "string" }
+          - { label: "Email address", name: "email", widget: "string" }
+          - { label: "Phone number (as displayed)", name: "phoneDisplay", widget: "string" }
+          - label: "Phone number (for tap-to-call, no spaces)"
+            name: "phoneLink"
+            widget: "string"
+            hint: "e.g. +441234567890"
+          - label: "WhatsApp number (digits only, country code, no +)"
+            name: "whatsappNumber"
+            widget: "string"
+            hint: "e.g. 447123456789"
+          - { label: "Default WhatsApp message", name: "whatsappMessage", widget: "text" }
+          - { label: "Location text shown in the footer", name: "location", widget: "string" }
+          - label: "Contact form endpoint (from formspree.io)"
+            name: "contactFormEndpoint"
+            widget: "string"
+          - label: "Newsletter form endpoint (from formspree.io)"
+            name: "newsletterFormEndpoint"
+            widget: "string"
+          - label: "Social links"
+            name: "social"
+            widget: "object"
+            fields:
+              - { label: "Facebook", name: "facebook", widget: "string", required: false }
+              - { label: "Instagram", name: "instagram", widget: "string", required: false }
+              - { label: "LinkedIn", name: "linkedin", widget: "string", required: false }
+              - { label: "X / Twitter", name: "x", widget: "string", required: false }

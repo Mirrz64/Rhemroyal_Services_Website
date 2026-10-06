@@ -1,0 +1,18 @@
+{
+  "resources": [
+    {
+      "type": "TEMPLATE · WORD DOCUMENT",
+      "title": "Business Plan Template",
+      "description": "A practical, ready-to-edit structure covering vision, market, operations, finances and a first action roadmap — the same shape we use with clients.",
+      "buttonLabel": "Download template",
+      "file": "/resources/rhemroyal-business-plan-template.docx"
+    },
+    {
+      "type": "TEMPLATE · WORD DOCUMENT",
+      "title": "90-Day Goal & Action Worksheet",
+      "description": "Turn a strategy into a short, trackable plan: goals, KPIs, owners and milestones for your next 90 days.",
+      "buttonLabel": "Download worksheet",
+      "file": "/resources/rhemroyal-90-day-action-worksheet.docx"
+    }
+  ]
+}

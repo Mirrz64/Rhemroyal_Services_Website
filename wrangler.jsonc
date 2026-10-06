@@ -2,6 +2,6 @@
   "name": "rhemroyal-services-website",
   "compatibility_date": "2026-10-06",
   "assets": {
-    "directory": "./"
+    "directory": "./_site"
   }
 }

@@ -1,0 +1,25 @@
+{
+  "team": [
+    {
+      "name": "Founder & Lead Consultant",
+      "role": "Business Strategy & Organisational Development",
+      "bio": "Add a short bio here — background, years of experience, and the kind of organisations you enjoy working with most.",
+      "photo": "",
+      "initials": "RS"
+    },
+    {
+      "name": "Coaching & Training Lead",
+      "role": "Founder Coaching & Team Development",
+      "bio": "Add a short bio here — qualifications, coaching philosophy, and a sentence on the impact you aim to have with clients.",
+      "photo": "",
+      "initials": "RS"
+    },
+    {
+      "name": "Social Impact Lead",
+      "role": "Community & Social Development",
+      "bio": "Add a short bio here — relevant projects, sectors you've supported, and what draws you to social impact work.",
+      "photo": "",
+      "initials": "RS"
+    }
+  ]
+}

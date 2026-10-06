@@ -1,0 +1,35 @@
+---
+layout: layouts/base.njk
+navActive: blog
+---
+<article>
+<div class="container breadcrumb"><a href="/index.html">Home</a><span>/</span><a href="/blog.html">Blog</a><span>/</span>{{ title }}</div>
+<header class="article-header">
+  <div class="container">
+    <span class="blog-tag">{{ tag }}</span>
+    <h1>{{ title }}</h1>
+    <p class="article-meta">{{ site.siteName }} · {{ readTime }} min read</p>
+  </div>
+</header>
+<div class="article-body">
+{{ content | safe }}
+
+<div class="newsletter" style="margin-top:36px">
+  <div class="newsletter-copy">
+    <h3>{{ ctaHeading or "Want to talk this through?" }}</h3>
+    <p>{{ ctaText or "Book a free 20-minute discovery call and we'll tell you honestly whether — and how — we can help." }}</p>
+  </div>
+  <a class="btn btn-primary" href="/contact.html#book">Book a Consultation</a>
+</div>
+
+{% set related = collections.posts | otherPosts(page.url, 2) %}
+{% if related.length %}
+<div class="article-share">
+  <span>Read next:</span>
+  {% for post in related %}
+  <a class="pill" href="{{ post.url }}">{{ post.data.title }}</a>
+  {% endfor %}
+</div>
+{% endif %}
+</div>
+</article>

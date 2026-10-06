@@ -1,0 +1,44 @@
+---
+layout: layouts/base.njk
+title: "Case Studies"
+description: "Illustrative examples of how Rhemroyal Services engagements are designed to help startups, growing businesses and social initiatives."
+navActive: case
+permalink: "case-studies.html"
+---
+<div class="container breadcrumb"><a href="/index.html">Home</a><span>/</span>Case Studies</div>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">CASE STUDIES</span>
+    <h1>How engagements like these typically play out.</h1>
+    <p class="lede">Rhemroyal Services is a young consultancy, so the examples below are illustrative scenarios based on how our services are designed to work — not yet real client results. We'll replace them with real, named stories as soon as we have client permission to share them.</p>
+  </div>
+</section>
+
+<section class="section white">
+  <div class="container case-grid">
+    {% for c in caseStudies.caseStudies %}
+    <article class="case-card">
+      <div class="case-card-content">
+        {% if c.isIllustrative %}<span class="case-tag">ILLUSTRATIVE EXAMPLE</span>{% endif %}
+        <h3>{{ c.title }}</h3>
+        <p><strong>Situation:</strong> {{ c.situation }}</p>
+        <p><strong>Approach:</strong> {{ c.approach }}</p>
+        <p class="case-quote">"{{ c.quote }}"</p>
+      </div>
+      <div class="case-card-results">
+        {% for r in c.results %}
+        <div class="case-result"><b>{{ r.stat }}</b><span>{{ r.label }}</span></div>
+        {% endfor %}
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container cta-inner">
+    <div><span class="eyebrow light">WANT TO BE OUR NEXT STORY?</span><h2>Let's talk about what your engagement could look like.</h2></div>
+    <a class="btn btn-light" href="/contact.html#book">Book a Consultation</a>
+  </div>
+</section>

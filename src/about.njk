@@ -1,0 +1,81 @@
+---
+layout: layouts/base.njk
+title: "About Us"
+description: "Rhemroyal Services is a social development and business consultancy. Learn who we help, the problem we solve, and how our team works alongside founders and organisations."
+navActive: about
+permalink: "about.html"
+---
+<div class="container breadcrumb"><a href="/index.html">Home</a><span>/</span>About</div>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">ABOUT {{ site.siteName | upper }}</span>
+    <h1>We help good ideas become organisations that run well.</h1>
+    <p class="lede">{{ site.siteName }} is a social development and business consultancy. We work alongside founders, teams and community leaders who have ambition and potential, but need clarity, structure and a practical plan to match it.</p>
+  </div>
+</section>
+
+<section class="section white">
+  <div class="container two-col">
+    <div><span class="eyebrow">THE PROBLEM WE SOLVE</span><h2>Ambition on its own isn't a plan.</h2></div>
+    <div>
+      <p>Most of the organisations we meet aren't short on drive. They have a founder who has worked nights and weekends to get this far, a team that believes in the mission, and no shortage of ideas about what could come next.</p>
+      <p>What's usually missing is something quieter: a clear sense of direction that everyone agrees on, a plan that turns that direction into steps, and the structure to keep those steps moving once the initial excitement settles into daily work.</p>
+      <p>That's the gap {{ site.siteName }} exists to close. Not by telling clients what to think, but by working alongside them until the plan is theirs, and they know how to run it.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section pale">
+  <div class="container">
+    <div class="section-heading"><span class="eyebrow">HOW WE WORK</span><h2>Practical, collaborative, built to be used.</h2><p>Three commitments guide every engagement, whatever size the organisation.</p></div>
+    <div class="cards">
+      <article class="card">
+        <h3>We start with your reality</h3>
+        <p>No template gets applied before we understand your actual constraints — budget, team size, timeline and history. Advice that ignores reality doesn't get used.</p>
+      </article>
+      <article class="card featured">
+        <h3>We build, not just advise</h3>
+        <p>Every engagement produces something concrete: a plan, a structure, a set of goals, a trained team. Ideas stay on paper far too often; ours don't.</p>
+      </article>
+      <article class="card">
+        <h3>We stay for implementation</h3>
+        <p>Strategy is easy to write and hard to run. We support the delivery stage, not just the planning stage, so the work survives contact with a normal week.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section white">
+  <div class="container">
+    <div class="section-heading"><span class="eyebrow">OUR TEAM</span><h2>The people behind the work.</h2><p>{{ site.siteName }} is built around consultants and coaches with hands-on experience in business planning, organisational development and community-focused delivery.</p></div>
+    <div class="team-grid">
+      {% for member in team.team %}
+      <article class="team-card">
+        <div class="team-photo">
+          {% if member.photo %}<img src="{{ member.photo }}" alt="{{ member.name }}" />{% else %}{{ member.initials }}{% endif %}
+        </div>
+        <h3>{{ member.name }}</h3>
+        <div class="team-role">{{ member.role }}</div>
+        <p>{{ member.bio }}</p>
+      </article>
+      {% endfor %}
+    </div>
+    <p class="form-note" style="margin-top:22px">Team profiles above are placeholders until updated through the site's content editor — swap in real names, photos and bios whenever you're ready.</p>
+  </div>
+</section>
+
+<section class="section dark">
+  <div class="container quote">
+    <div class="quote-mark">&ldquo;</div>
+    <blockquote>We don't just give advice. We help you build something you can actually run with.</blockquote>
+    <footer style="color:#b7c6df">— {{ site.siteName }} philosophy</footer>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container cta-inner">
+    <div><span class="eyebrow light">LET'S WORK TOGETHER</span><h2>Tell us where your organisation is right now.</h2><p>A short conversation is usually enough to see whether — and how — we can help.</p></div>
+    <a class="btn btn-light" href="/contact.html#book">Book a Consultation</a>
+  </div>
+</section>

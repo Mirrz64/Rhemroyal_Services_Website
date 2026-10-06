@@ -1,0 +1,94 @@
+---
+layout: layouts/base.njk
+title: "Contact"
+description: "Get in touch with Rhemroyal Services to book a free consultation, ask a question, or find out which service fits your organisation."
+navActive: contact
+permalink: "contact.html"
+---
+<div class="container breadcrumb"><a href="/index.html">Home</a><span>/</span>Contact</div>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">GET IN TOUCH</span>
+    <h1>Let's talk about where your organisation is right now.</h1>
+    <p class="lede">Tell us a little about what you're working on. We reply within one to two business days and can usually offer a free 20-minute discovery call.</p>
+  </div>
+</section>
+
+<section class="section white" id="book">
+  <div class="container contact-grid">
+    <div class="card-form">
+      <p class="form-status" aria-live="polite"></p>
+      <form data-remote-form="contactFormEndpoint" data-success-message="Thanks — we've received your message and will be in touch within one to two business days." data-submit-label="Send Message">
+        <input type="hidden" name="_subject" value="New enquiry from {{ site.siteName }} website" />
+        <div class="form-grid">
+          <div class="form-field">
+            <label for="contact-name">Full name</label>
+            <input type="text" id="contact-name" name="name" required />
+          </div>
+          <div class="form-field">
+            <label for="contact-email">Email address</label>
+            <input type="email" id="contact-email" name="email" required />
+          </div>
+          <div class="form-field">
+            <label for="contact-org">Organisation <span class="optional">(optional)</span></label>
+            <input type="text" id="contact-org" name="organisation" />
+          </div>
+          <div class="form-field">
+            <label for="contact-phone">Phone <span class="optional">(optional)</span></label>
+            <input type="tel" id="contact-phone" name="phone" />
+          </div>
+          <div class="form-field full">
+            <label for="contact-interest">What are you interested in?</label>
+            <select id="contact-interest" name="interest">
+              <option value="Not sure yet">Not sure yet — happy to discuss</option>
+              <option value="Business Strategy">Business Strategy</option>
+              <option value="Business Planning">Business Planning</option>
+              <option value="Coaching & Training">Coaching & Training</option>
+              <option value="Organisational Development">Organisational Development</option>
+              <option value="Social Development">Social Development</option>
+              <option value="Growth Support">Growth Support</option>
+              <option value="From Idea to Action programme">From Idea to Action programme</option>
+              <option value="Organisation Growth Accelerator">Organisation Growth Accelerator</option>
+              <option value="Social Impact Development programme">Social Impact Development programme</option>
+            </select>
+          </div>
+          <div class="form-field full">
+            <label for="contact-message">Tell us about your organisation and what you're hoping to achieve</label>
+            <textarea id="contact-message" name="message" required></textarea>
+          </div>
+        </div>
+        <label class="checkbox-field">
+          <input type="checkbox" name="consent" required />
+          <span>I agree to {{ site.siteName }} storing my details to respond to this enquiry, in line with the <a href="/privacy-policy.html">Privacy Policy</a>.</span>
+        </label>
+        <button type="submit" class="btn btn-primary" style="margin-top:20px">Send Message</button>
+        <p class="form-note">We typically reply within one to two business days.</p>
+      </form>
+    </div>
+
+    <div>
+      <div class="contact-info-card">
+        <h3>Contact details</h3>
+        <div class="contact-row"><div><div class="label">EMAIL</div><a href="mailto:{{ site.email }}">{{ site.email }}</a></div></div>
+        <div class="contact-row"><div><div class="label">PHONE</div><a href="tel:{{ site.phoneLink }}">{{ site.phoneDisplay }}</a></div></div>
+        <div class="contact-row"><div><div class="label">WHATSAPP</div><a href="#" data-whatsapp-link target="_blank" rel="noopener">Message us on WhatsApp</a></div></div>
+        <div class="contact-row"><div><div class="label">LOCATION</div><span>{{ site.location }}</span></div></div>
+        <div class="social-row">
+          <a class="social-icon" href="{{ site.social.linkedin }}" target="_blank" rel="noopener" aria-label="{{ site.siteName }} on LinkedIn">in</a>
+          <a class="social-icon" href="{{ site.social.instagram }}" target="_blank" rel="noopener" aria-label="{{ site.siteName }} on Instagram">IG</a>
+          <a class="social-icon" href="{{ site.social.facebook }}" target="_blank" rel="noopener" aria-label="{{ site.siteName }} on Facebook">FB</a>
+          <a class="social-icon" href="{{ site.social.x }}" target="_blank" rel="noopener" aria-label="{{ site.siteName }} on X">X</a>
+        </div>
+      </div>
+      <div class="card" style="margin-top:20px">
+        <h3>What happens next?</h3>
+        <ul class="programme-list">
+          <li>We read your message and reply within one to two business days</li>
+          <li>If it looks like a good fit, we'll offer a free 20-minute discovery call</li>
+          <li>You'll get a clear, tailored quote before any paid work begins</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
