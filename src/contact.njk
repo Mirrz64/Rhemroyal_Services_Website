@@ -48,6 +48,8 @@ permalink: "contact.html"
               <option value="Organisational Development">Organisational Development</option>
               <option value="Social Development">Social Development</option>
               <option value="Growth Support">Growth Support</option>
+              <option value="Real Estate Consultancy">Real Estate Consultancy</option>
+              <option value="General Services">General Services</option>
               <option value="From Idea to Action programme">From Idea to Action programme</option>
               <option value="Organisation Growth Accelerator">Organisation Growth Accelerator</option>
               <option value="Social Impact Development programme">Social Impact Development programme</option>
@@ -74,12 +76,7 @@ permalink: "contact.html"
         <div class="contact-row"><div><div class="label">PHONE</div><a href="tel:{{ site.phoneLink }}">{{ site.phoneDisplay }}</a></div></div>
         <div class="contact-row"><div><div class="label">WHATSAPP</div><a href="#" data-whatsapp-link target="_blank" rel="noopener">Message us on WhatsApp</a></div></div>
         <div class="contact-row"><div><div class="label">LOCATION</div><span>{{ site.location }}</span></div></div>
-        <div class="social-row">
-          <a class="social-icon" href="{{ site.social.linkedin }}" target="_blank" rel="noopener" aria-label="{{ site.siteName }} on LinkedIn">in</a>
-          <a class="social-icon" href="{{ site.social.instagram }}" target="_blank" rel="noopener" aria-label="{{ site.siteName }} on Instagram">IG</a>
-          <a class="social-icon" href="{{ site.social.facebook }}" target="_blank" rel="noopener" aria-label="{{ site.siteName }} on Facebook">FB</a>
-          <a class="social-icon" href="{{ site.social.x }}" target="_blank" rel="noopener" aria-label="{{ site.siteName }} on X">X</a>
-        </div>
+        {% include "partials/social.njk" %}
       </div>
       <div class="card" style="margin-top:20px">
         <h3>What happens next?</h3>

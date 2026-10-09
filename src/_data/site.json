@@ -18,8 +18,8 @@
   "newsletterFormEndpoint": "https://formspree.io/f/REPLACE_WITH_NEWSLETTER_FORM_ID",
   "social": {
     "facebook": "https://www.facebook.com/share/1BhRJoMs1a/?mibextid=wwXIfr",
-    "instagram": "#",
-    "linkedin": "#",
-    "x": "#"
+    "instagram": "",
+    "linkedin": "",
+    "x": ""
   }
 }

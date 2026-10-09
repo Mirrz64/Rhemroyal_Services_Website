@@ -89,12 +89,7 @@
       <div class="footer-brand">
         <strong>{{ site.siteName | upper }}</strong>
         <p>Social development & business consultancy helping founders and emerging organisations move from idea to sustainable impact.</p>
-        <div class="social-row">
-          <a class="social-icon" href="{{ site.social.linkedin }}" target="_blank" rel="noopener" aria-label="{{ site.siteName }} on LinkedIn">in</a>
-          <a class="social-icon" href="{{ site.social.instagram }}" target="_blank" rel="noopener" aria-label="{{ site.siteName }} on Instagram">IG</a>
-          <a class="social-icon" href="{{ site.social.facebook }}" target="_blank" rel="noopener" aria-label="{{ site.siteName }} on Facebook">FB</a>
-          <a class="social-icon" href="{{ site.social.x }}" target="_blank" rel="noopener" aria-label="{{ site.siteName }} on X">X</a>
-        </div>
+        {% include "partials/social.njk" %}
       </div>
       <div class="footer-col">
         <h4>Explore</h4>
