@@ -78,6 +78,7 @@ collections:
             name: "team"
             widget: "list"
             label_singular: "Team member"
+            hint: "Add or remove people here. The order here is the order on the Meet the Team page."
             summary: "{{name}}"
             fields:
               - { label: "Name or job title to display", name: "name", widget: "string" }
@@ -85,7 +86,8 @@ collections:
               - { label: "Areas of expertise (optional, shown in small text)", name: "expertise", widget: "string", required: false }
               - { label: "Bio", name: "bio", widget: "text", hint: "Leave a blank line between paragraphs." }
               - { label: "Photo", name: "photo", widget: "image", required: false, hint: "Leave empty to show plain initials instead." }
-              - { label: "Email address", name: "email", widget: "string", required: false, hint: "Shown on the team card." }
+              - { label: "Email address", name: "email", widget: "string", required: false, hint: "Shown on this person's profile." }
+              - { label: "Phone number", name: "phone", widget: "string", required: false, hint: "Include the country code, e.g. +234 801 234 5678. Shown on this person's profile." }
               - { label: "Initials (used only if no photo is set)", name: "initials", widget: "string", pattern: ["^.{1,3}$", "Up to 3 characters"] }
 
   # ---------------------------------------------------------------
@@ -164,15 +166,6 @@ collections:
           - { label: "Top banner text", name: "announcementText", widget: "string" }
           - { label: "Top banner link text", name: "announcementLinkText", widget: "string" }
           - { label: "Main email address", name: "email", widget: "string" }
-          - label: "Directors' / staff email addresses (shown on the Contact page)"
-            name: "staffEmails"
-            widget: "list"
-            label_singular: "Email address"
-            summary: "{{label}} — {{address}}"
-            required: false
-            fields:
-              - { label: "Name or role shown beside the address", name: "label", widget: "string", required: false }
-              - { label: "Email address", name: "address", widget: "string" }
           - label: "Phone numbers"
             name: "phones"
             widget: "list"

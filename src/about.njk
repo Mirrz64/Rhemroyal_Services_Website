@@ -50,19 +50,18 @@ permalink: "about.html"
   <div class="container">
     <div class="section-heading"><span class="eyebrow">OUR TEAM</span><h2>The people behind the work.</h2><p>{{ site.siteName }} is built around consultants and coaches with hands-on experience in business planning, organisational development and community-focused delivery.</p></div>
     <div class="team-grid">
-      {% for member in team.team %}
-      <article class="team-card">
+      {% for member in team.team | limit(6) %}
+      <article class="team-card compact">
         <div class="team-photo">
           {% if member.photo %}<img src="{{ member.photo }}" alt="{{ member.name }}" width="112" height="112" loading="lazy" />{% else %}{{ member.initials }}{% endif %}
         </div>
         <h3>{{ member.name }}</h3>
         <div class="team-role">{{ member.role }}</div>
-        {% if member.expertise %}<p class="team-expertise">{{ member.expertise }}</p>{% endif %}
-        {% for para in member.bio | paragraphs %}<p>{{ para }}</p>{% endfor %}
-        {% if member.email %}<a class="card-link" href="mailto:{{ member.email }}">{{ member.email }}</a>{% endif %}
+        <a class="card-link" href="/meet-the-team.html#{{ member.name | idify }}">View profile →</a>
       </article>
       {% endfor %}
     </div>
+    <p style="margin-top:30px"><a class="btn btn-secondary" href="/meet-the-team.html">Meet the full team</a></p>
   </div>
 </section>
 

@@ -72,7 +72,7 @@ permalink: "contact.html"
     <div>
       <div class="contact-info-card">
         <h3>Contact details</h3>
-        <div class="contact-row"><div><div class="label">EMAIL</div><a href="mailto:{{ site.email }}">{{ site.email }}</a>{% for e in site.staffEmails %}<br><a href="mailto:{{ e.address }}">{{ e.address }}</a>{% if e.label %} <span style="opacity:.65;font-size:.85em">({{ e.label }})</span>{% endif %}{% endfor %}</div></div>
+        <div class="contact-row"><div><div class="label">EMAIL</div><a href="mailto:{{ site.email }}">{{ site.email }}</a></div></div>
         <div class="contact-row"><div><div class="label">PHONE</div>{% for p in site.phones %}<a href="tel:{{ p.link }}">{{ p.display }}</a>{% if not loop.last %}<br>{% endif %}{% endfor %}</div></div>
         <div class="contact-row"><div><div class="label">WHATSAPP</div><a href="#" data-whatsapp-link target="_blank" rel="noopener">Message us on WhatsApp</a></div></div>
         <div class="contact-row"><div><div class="label">LOCATION</div><span>{{ site.location }}</span></div></div>

@@ -9,21 +9,7 @@
   "announcementText": "Free 20-minute discovery call for new enquiries —",
   "announcementLinkText": "book yours today",
   "email": "info@rhemroyalservices.org",
-  "staffEmails": [
-    {
-      "label": "Director",
-      "address": "emmaevbuomwan@rhemroyalservices.org"
-    },
-    {
-      "label": "Director",
-      "address": "georgeomondiagbe@rhemroyalservices.org"
-    }
-  ],
   "phones": [
-    {
-      "display": "+234 705 954 0501",
-      "link": "+2347059540501"
-    },
     {
       "display": "+234 813 694 6304",
       "link": "+2348136946304"

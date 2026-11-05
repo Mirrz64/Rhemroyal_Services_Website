@@ -28,6 +28,16 @@ module.exports = function (eleventyConfig) {
     return String(text || "").split(/\n\s*\n/).map(function (t) { return t.trim(); }).filter(Boolean);
   });
 
+  // First `n` items of a list
+  eleventyConfig.addFilter("limit", function (arr, n) {
+    return (arr || []).slice(0, n);
+  });
+
+  // Turns a name into a safe link anchor, e.g. "Emmanuel Evbuomwan" -> "emmanuel-evbuomwan"
+  eleventyConfig.addFilter("idify", function (text) {
+    return String(text || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+  });
+
   return {
     dir: {
       input: "src",

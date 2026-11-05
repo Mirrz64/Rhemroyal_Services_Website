@@ -1,0 +1,47 @@
+---
+layout: layouts/base.njk
+title: "Meet the Team"
+description: "Meet the directors and team behind Rhemroyal Services: their experience, areas of expertise and how to contact them."
+navActive: team
+permalink: "meet-the-team.html"
+---
+<div class="container breadcrumb"><a href="/index.html">Home</a><span>/</span>Meet the Team</div>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">MEET THE TEAM</span>
+    <h1>The people behind {{ site.siteName }}.</h1>
+    <p class="lede">The directors and team you'll work with: their experience, their areas of expertise, and how to reach them.</p>
+  </div>
+</section>
+
+<section class="section white">
+  <div class="container profile-list">
+    {% for member in team.team %}
+    <article class="profile-card" id="{{ member.name | idify }}">
+      <div class="profile-photo">
+        {% if member.photo %}<img src="{{ member.photo }}" alt="{{ member.name }}" width="160" height="160" loading="lazy" />{% else %}{{ member.initials }}{% endif %}
+      </div>
+      <div>
+        <h2>{{ member.name }}</h2>
+        <div class="profile-role">{{ member.role }}</div>
+        {% if member.expertise %}<p class="profile-expertise">{{ member.expertise }}</p>{% endif %}
+        <div class="profile-bio">{% for para in member.bio | paragraphs %}<p>{{ para }}</p>{% endfor %}</div>
+        {% if member.email or member.phone %}
+        <div class="profile-contact">
+          {% if member.email %}<div><span>EMAIL</span><a href="mailto:{{ member.email }}">{{ member.email }}</a></div>{% endif %}
+          {% if member.phone %}<div><span>PHONE</span><a href="tel:{{ member.phone | replace(' ', '') }}">{{ member.phone }}</a></div>{% endif %}
+        </div>
+        {% endif %}
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container cta-inner">
+    <div><span class="eyebrow light">WORK WITH US</span><h2>Want to talk to the team?</h2><p>A short conversation is usually enough to see whether, and how, we can help.</p></div>
+    <a class="btn btn-light" href="/contact.html#book">Book a Consultation</a>
+  </div>
+</section>
