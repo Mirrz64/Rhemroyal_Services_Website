@@ -23,6 +23,11 @@ module.exports = function (eleventyConfig) {
       .slice(0, limit || 2);
   });
 
+  // Splits a multi-paragraph text field (blank line between paragraphs) into an array
+  eleventyConfig.addFilter("paragraphs", function (text) {
+    return String(text || "").split(/\n\s*\n/).map(function (t) { return t.trim(); }).filter(Boolean);
+  });
+
   return {
     dir: {
       input: "src",

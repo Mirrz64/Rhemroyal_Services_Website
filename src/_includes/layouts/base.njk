@@ -113,7 +113,7 @@
         <h4>Contact</h4>
         <ul>
           <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-          <li><a href="tel:{{ site.phoneLink }}">{{ site.phoneDisplay }}</a></li>
+          {% for p in site.phones %}<li><a href="tel:{{ p.link }}">{{ p.display }}</a></li>{% endfor %}
           <li>{{ site.location }}</li>
         </ul>
       </div>

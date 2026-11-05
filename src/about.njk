@@ -53,15 +53,16 @@ permalink: "about.html"
       {% for member in team.team %}
       <article class="team-card">
         <div class="team-photo">
-          {% if member.photo %}<img src="{{ member.photo }}" alt="{{ member.name }}" />{% else %}{{ member.initials }}{% endif %}
+          {% if member.photo %}<img src="{{ member.photo }}" alt="{{ member.name }}" width="112" height="112" loading="lazy" />{% else %}{{ member.initials }}{% endif %}
         </div>
         <h3>{{ member.name }}</h3>
         <div class="team-role">{{ member.role }}</div>
-        <p>{{ member.bio }}</p>
+        {% if member.expertise %}<p class="team-expertise">{{ member.expertise }}</p>{% endif %}
+        {% for para in member.bio | paragraphs %}<p>{{ para }}</p>{% endfor %}
+        {% if member.email %}<a class="card-link" href="mailto:{{ member.email }}">{{ member.email }}</a>{% endif %}
       </article>
       {% endfor %}
     </div>
-    <p class="form-note" style="margin-top:22px">Team profiles above are placeholders until updated through the site's content editor — swap in real names, photos and bios whenever you're ready.</p>
   </div>
 </section>
 

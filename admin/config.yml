@@ -81,9 +81,11 @@ collections:
             summary: "{{name}}"
             fields:
               - { label: "Name or job title to display", name: "name", widget: "string" }
-              - { label: "Role", name: "role", widget: "string" }
-              - { label: "Short bio", name: "bio", widget: "text" }
+              - { label: "Role / title", name: "role", widget: "string" }
+              - { label: "Areas of expertise (optional, shown in small text)", name: "expertise", widget: "string", required: false }
+              - { label: "Bio", name: "bio", widget: "text", hint: "Leave a blank line between paragraphs." }
               - { label: "Photo", name: "photo", widget: "image", required: false, hint: "Leave empty to show plain initials instead." }
+              - { label: "Email address", name: "email", widget: "string", required: false, hint: "Shown on the team card." }
               - { label: "Initials (used only if no photo is set)", name: "initials", widget: "string", pattern: ["^.{1,3}$", "Up to 3 characters"] }
 
   # ---------------------------------------------------------------
@@ -161,12 +163,24 @@ collections:
           - { label: "Tagline", name: "tagline", widget: "string" }
           - { label: "Top banner text", name: "announcementText", widget: "string" }
           - { label: "Top banner link text", name: "announcementLinkText", widget: "string" }
-          - { label: "Email address", name: "email", widget: "string" }
-          - { label: "Phone number (as displayed)", name: "phoneDisplay", widget: "string" }
-          - label: "Phone number (for tap-to-call, no spaces)"
-            name: "phoneLink"
-            widget: "string"
-            hint: "e.g. +2348012345678"
+          - { label: "Main email address", name: "email", widget: "string" }
+          - label: "Directors' / staff email addresses (shown on the Contact page)"
+            name: "staffEmails"
+            widget: "list"
+            label_singular: "Email address"
+            summary: "{{label}} — {{address}}"
+            required: false
+            fields:
+              - { label: "Name or role shown beside the address", name: "label", widget: "string", required: false }
+              - { label: "Email address", name: "address", widget: "string" }
+          - label: "Phone numbers"
+            name: "phones"
+            widget: "list"
+            label_singular: "Phone number"
+            summary: "{{display}}"
+            fields:
+              - { label: "Number as shown on the site", name: "display", widget: "string", hint: "e.g. +234 801 234 5678" }
+              - { label: "Number for tap-to-call (no spaces)", name: "link", widget: "string", hint: "e.g. +2348012345678" }
           - label: "WhatsApp number (digits only, country code, no +)"
             name: "whatsappNumber"
             widget: "string"
