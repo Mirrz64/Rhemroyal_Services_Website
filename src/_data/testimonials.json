@@ -1,25 +1,20 @@
 {
   "testimonials": [
     {
-      "quote": "We had a strong idea but no structure around it. Rhemroyal helped us turn a notebook of plans into an operating model we could actually follow.",
-      "name": "Founder",
-      "role": "Early-stage startup",
+      "quote": "Through their professional guidance and insightful engagement, we now have a clearer understanding of how to align our vision and mission and, more importantly, how to translate that alignment into effective organisational functionality and sustainable growth.",
+      "fullQuote": "Our experience with RhemRoyal Business Services has been both enlightening and transformative for H.E.R Foundation.\n\nBefore our encounter with their team, although we had a clear understanding of our organisation’s vision and mission, we struggled to fully understand how both statements should connect and translate into the practical functionality, structure, and overall direction of the organisation.\n\nOur engagement with RhemRoyal Business Services provided us with a fresh perspective and a deeper understanding of the relationship between an organisation’s vision and mission. We came to appreciate that the vision is not just a statement of what an organisation hopes to achieve, while the mission is not merely a description of what it does; rather, both must work hand in hand to guide strategic decisions, shape programmes, define objectives, and ensure that every organisational activity contributes meaningfully to its desired impact.\n\nThrough their professional guidance and insightful engagement, we now have a clearer understanding of how to align our vision and mission and, more importantly, how to translate that alignment into effective organisational functionality and sustainable growth.\n\nFor us, this was more than just a learning experience; it was an important step towards strengthening our institutional foundation and becoming more intentional about the work we do and the impact we seek to create.\n\nWe sincerely appreciate RhemRoyal Business Services for their knowledge, professionalism, and commitment to helping organisations gain clarity, build structure, and function more effectively.\n\nWe are grateful for the value you have added to H.E.R Foundation, and we look forward to applying these insights as we continue building an organisation that creates meaningful and sustainable impact.",
+      "name": "Amb. Amayo Osarieme Betsy",
+      "role": "Executive Director, H.E.R Foundation",
       "initial": "A",
-      "isPlaceholder": true
+      "isPlaceholder": false
     },
     {
-      "quote": "The coaching sessions gave our team the confidence to make decisions faster and stop second-guessing every step.",
-      "name": "Team Lead",
-      "role": "Community organisation",
-      "initial": "T",
-      "isPlaceholder": true
-    },
-    {
-      "quote": "Rhemroyal didn't just hand us a report. They stayed with us through implementation, which is exactly what we needed.",
-      "name": "Director",
-      "role": "Growing social enterprise",
-      "initial": "O",
-      "isPlaceholder": true
+      "quote": "He breaks down things methodically and helps you understand the relationship between elements in a way that you cannot forget because he breaks them down entirely. … I have not just learned but implemented my learnings in my day to day activity in business.",
+      "fullQuote": "Working with and learning from Mr. Emmanuel has been, for lack of a better word, amazing for me. He breaks down things methodically and helps you understand the relationship between elements in a way that you cannot forget because he breaks them down entirely. I have learnt and I'm still learning a lot. For someone who learns and picks things on the go, I have definitely learnt a lot and still learning. I have not just learned but implemented my learnings in my day to day activity in business.\n\nThank you Mr. Emmanuel and thank you Rhemroyal for always delivering exceptionally.",
+      "name": "Abbas Jewel Network",
+      "role": "Client",
+      "initial": "AJ",
+      "isPlaceholder": false
     }
   ]
 }

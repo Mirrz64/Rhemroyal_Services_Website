@@ -1,13 +1,13 @@
 {
-  "siteName": "Rhemroyal Services",
+  "siteName": "Rhemroyal Business Services",
   "legalName": "Rhemroyal Business Services",
   "registrationBody": "Corporate Affairs Commission (CAC), Nigeria",
   "registrationNumber": "BN 3443224",
   "registeredAddress": "3 Eben Lane, off Akpakpava Road, Benin City, Edo State, Nigeria",
   "siteUrl": "https://rhemroyalservices.org",
   "tagline": "Clarity for today. Growth for tomorrow.",
-  "announcementText": "Free 20-minute discovery call for new enquiries —",
-  "announcementLinkText": "book yours today",
+  "announcementText": "Have a project in mind? Let's have a conversation —",
+  "announcementLinkText": "get in touch",
   "email": "info@rhemroyalservices.org",
   "phones": [
     {
@@ -16,7 +16,7 @@
     }
   ],
   "whatsappNumber": "2348136946304",
-  "whatsappMessage": "Hello Rhemroyal Services, I'd like to find out more about your consultancy support.",
+  "whatsappMessage": "Hello Rhemroyal Business Services, I'd like to find out more about your consultancy support.",
   "location": "Benin City, Edo State, Nigeria",
   "contactFormEndpoint": "https://formspree.io/f/mqppnjqv",
   "newsletterFormEndpoint": "https://formspree.io/f/mqppnjqv",

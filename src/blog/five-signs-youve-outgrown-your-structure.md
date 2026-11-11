@@ -5,7 +5,7 @@ tag: "ORGANISATIONAL DEVELOPMENT"
 readTime: 5
 date: 2026-08-03
 ctaHeading: "Recognise more than one of these?"
-ctaText: "A short conversation is usually enough to see where to start. Book a free discovery call."
+ctaText: "A short conversation is usually enough to see where to start. Get in touch."
 ---
 Every organisation starts informally, and for a while, that's exactly right. A five-person team doesn't need an org chart or a process manual — everyone just talks to everyone. The trouble starts when the team keeps growing and the structure doesn't grow with it.
 

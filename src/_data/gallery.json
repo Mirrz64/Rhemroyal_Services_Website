@@ -1,0 +1,24 @@
+{
+  "photos": [
+    {
+      "image": "/assets/gallery/workshop-01.jpg",
+      "caption": "Training session",
+      "alt": "A facilitator addressing participants in a training room"
+    },
+    {
+      "image": "/assets/gallery/workshop-02.jpg",
+      "caption": "Group discussion",
+      "alt": "Participants and a facilitator in a small group discussion"
+    },
+    {
+      "image": "/assets/gallery/workshop-03.jpg",
+      "caption": "Participant engagement",
+      "alt": "A facilitator speaking with participants during a workshop"
+    },
+    {
+      "image": "/assets/gallery/workshop-04.jpg",
+      "caption": "Facilitated session",
+      "alt": "A facilitator speaking to a group during a session"
+    }
+  ]
+}

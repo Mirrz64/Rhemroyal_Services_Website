@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
 title: "Contact"
-description: "Get in touch with Rhemroyal Services to book a free consultation, ask a question, or find out which service fits your organisation."
+description: "Get in touch with Rhemroyal Business Services to start a conversation, ask a question, or find out which service fits your organisation."
 navActive: contact
 permalink: "contact.html"
 ---
@@ -11,7 +11,7 @@ permalink: "contact.html"
   <div class="container">
     <span class="eyebrow">GET IN TOUCH</span>
     <h1>Let's talk about where your organisation is right now.</h1>
-    <p class="lede">Tell us a little about what you're working on. We reply within one to two business days and can usually offer a free 20-minute discovery call.</p>
+    <p class="lede">Tell us a little about what you're working on and we'll start a conversation.</p>
   </div>
 </section>
 
@@ -19,7 +19,7 @@ permalink: "contact.html"
   <div class="container contact-grid">
     <div class="card-form">
       <p class="form-status" aria-live="polite"></p>
-      <form data-remote-form="contactFormEndpoint" data-success-message="Thanks — we've received your message and will be in touch within one to two business days." data-submit-label="Send Message">
+      <form data-remote-form="contactFormEndpoint" data-success-message="Thanks — we've received your message and will be in touch." data-submit-label="Send Message">
         <input type="hidden" name="_subject" value="New enquiry from {{ site.siteName }} website" />
         <div class="form-grid">
           <div class="form-field">
@@ -50,6 +50,8 @@ permalink: "contact.html"
               <option value="Growth Support">Growth Support</option>
               <option value="Real Estate Consultancy">Real Estate Consultancy</option>
               <option value="General Services">General Services</option>
+              <option value="Web Design & Development">Web Design & Development</option>
+              <option value="Software & App Development">Software & App Development</option>
               <option value="From Idea to Action programme">From Idea to Action programme</option>
               <option value="Organisation Growth Accelerator">Organisation Growth Accelerator</option>
               <option value="Social Impact Development programme">Social Impact Development programme</option>
@@ -65,7 +67,7 @@ permalink: "contact.html"
           <span>I agree to {{ site.siteName }} storing my details to respond to this enquiry, in line with the <a href="/privacy-policy.html">Privacy Policy</a>.</span>
         </label>
         <button type="submit" class="btn btn-primary" style="margin-top:20px">Send Message</button>
-        <p class="form-note">We typically reply within one to two business days.</p>
+        <p class="form-note">We'll get back to you.</p>
       </form>
     </div>
 
@@ -81,9 +83,9 @@ permalink: "contact.html"
       <div class="card" style="margin-top:20px">
         <h3>What happens next?</h3>
         <ul class="programme-list">
-          <li>We read your message and reply within one to two business days</li>
-          <li>If it looks like a good fit, we'll offer a free 20-minute discovery call</li>
-          <li>You'll get a clear, tailored quote before any paid work begins</li>
+          <li>We read your message and get back to you</li>
+          <li>We have a conversation about where you are and what you need</li>
+          <li>If it's a good fit, we agree the next steps together</li>
         </ul>
       </div>
     </div>

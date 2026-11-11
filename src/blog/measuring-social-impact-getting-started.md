@@ -5,7 +5,7 @@ tag: "SOCIAL DEVELOPMENT"
 readTime: 6
 date: 2026-08-28
 ctaHeading: "Ready to build your impact framework?"
-ctaText: "Book a free discovery call and we'll talk through where to start."
+ctaText: "Get in touch and we'll talk through where to start."
 ---
 "How do you measure your impact?" is one of the most common questions small community organisations get asked — by funders, by partners, sometimes just by their own volunteers. It's also one of the questions people put off answering, because it sounds like it requires a research department they don't have.
 

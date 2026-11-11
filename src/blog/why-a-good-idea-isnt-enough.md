@@ -5,7 +5,7 @@ tag: "BUSINESS PLANNING"
 readTime: 6
 date: 2026-07-14
 ctaHeading: "Want help turning your idea into a plan?"
-ctaText: "Book a free 20-minute discovery call and we'll tell you honestly whether — and how — we can help."
+ctaText: "Get in touch and we'll tell you honestly whether, and how, we can help."
 ---
 Almost every founder we meet has a genuinely good idea. That's rarely the problem. The problem is that a good idea and a workable business are two different things, and it's easy to mistake conviction about the first for progress on the second.
 

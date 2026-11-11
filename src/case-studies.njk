@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
 title: "Case Studies"
-description: "Illustrative examples of how Rhemroyal Services engagements are designed to help startups, growing businesses and social initiatives."
+description: "Illustrative examples of how Rhemroyal Business Services engagements are designed to help startups, growing businesses and social initiatives."
 navActive: case
 permalink: "case-studies.html"
 ---
@@ -10,13 +10,41 @@ permalink: "case-studies.html"
 <section class="page-hero">
   <div class="container">
     <span class="eyebrow">CASE STUDIES</span>
-    <h1>How engagements like these typically play out.</h1>
-    <p class="lede">Rhemroyal Services is a young consultancy, so the examples below are illustrative scenarios based on how our services are designed to work — not yet real client results. We'll replace them with real, named stories as soon as we have client permission to share them.</p>
+    <h1>The work, and what clients say about it.</h1>
+    <p class="lede">Feedback from the organisations and people we've worked with, photos from our sessions, and illustrative examples of how our engagements are designed to work.</p>
   </div>
 </section>
 
-<section class="section white">
-  <div class="container case-grid">
+<section class="section white" id="testimonials">
+  <div class="container">
+    <div class="section-heading"><span class="eyebrow">WHAT CLIENTS SAY</span><h2>In their words.</h2></div>
+    <div class="testimonial-full-list">
+      {% for t in testimonials.testimonials %}
+      <article class="testimonial-full">
+        {% for para in (t.fullQuote or t.quote) | paragraphs %}<p>{{ para }}</p>{% endfor %}
+        <div class="testimonial-author"><div class="author-avatar">{{ t.initial }}</div><div><div class="author-name">{{ t.name }}</div><div class="author-role">{{ t.role }}</div></div></div>
+        {% if t.isPlaceholder %}<span class="placeholder-tag">Sample testimonial — replace with a real quote</span>{% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section cream" id="in-the-room">
+  <div class="container">
+    <div class="section-heading"><span class="eyebrow">IN THE ROOM</span><h2>Our work in action.</h2><p>Training sessions and conversations with the organisations we work with.</p></div>
+    <div class="gallery-grid">
+      {% for p in gallery.photos | limit(12) %}
+      <figure class="gallery-item"><img src="{{ p.image }}" alt="{{ p.alt }}" width="1000" height="750" loading="lazy" />{% if p.caption %}<figcaption>{{ p.caption }}</figcaption>{% endif %}</figure>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section white" id="examples">
+  <div class="container">
+    <div class="section-heading"><span class="eyebrow">HOW ENGAGEMENTS PLAY OUT</span><h2>Illustrative examples.</h2><p>These scenarios are based on how our services are designed to work. They are not named client results.</p></div>
+    <div class="case-grid">
     {% for c in caseStudies.caseStudies %}
     <article class="case-card">
       <div class="case-card-content">
@@ -33,6 +61,7 @@ permalink: "case-studies.html"
       </div>
     </article>
     {% endfor %}
+    </div>
   </div>
 </section>
 

@@ -54,7 +54,8 @@ collections:
             label_singular: "Testimonial"
             summary: "{{name}} — {{role}}"
             fields:
-              - { label: "Quote", name: "quote", widget: "text" }
+              - { label: "Short quote (shown on the homepage)", name: "quote", widget: "text" }
+              - { label: "Full testimonial (optional)", name: "fullQuote", widget: "text", required: false, hint: "Shown in full on the Case Studies page. Leave a blank line between paragraphs." }
               - { label: "Name (or role, if they prefer not to be named)", name: "name", widget: "string" }
               - { label: "Their role / organisation type", name: "role", widget: "string" }
               - { label: "Initial shown in the avatar circle", name: "initial", widget: "string", pattern: ["^.{1,2}$", "One or two characters"] }
@@ -145,6 +146,27 @@ collections:
               - { label: "Description", name: "description", widget: "text" }
               - { label: "Button text", name: "buttonLabel", widget: "string", default: "Download" }
               - { label: "File to download", name: "file", widget: "file" }
+
+  # ---------------------------------------------------------------
+  # Photo gallery — homepage (first three) and Case Studies page
+  # ---------------------------------------------------------------
+  - name: "gallery"
+    label: "Photo Gallery"
+    files:
+      - name: "gallery"
+        label: "Photo Gallery"
+        file: "src/_data/gallery.json"
+        fields:
+          - label: "Photos"
+            name: "photos"
+            widget: "list"
+            label_singular: "Photo"
+            summary: "{{caption}}"
+            hint: "The first three appear on the homepage; all appear on the Case Studies page. Only add photos of people who have agreed to be shown."
+            fields:
+              - { label: "Photo", name: "image", widget: "image" }
+              - { label: "Caption", name: "caption", widget: "string", required: false }
+              - { label: "Description for screen readers (what the photo shows)", name: "alt", widget: "string" }
 
   # ---------------------------------------------------------------
   # Site settings — contact details, WhatsApp, social links

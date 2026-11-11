@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Rhemroyal Services — Shared site JavaScript
+   Rhemroyal Business Services — Shared site JavaScript
    No build step required for THIS file — it's copied as-is by Eleventy.
    Settings (WhatsApp number, form endpoints) come from window.RHEMROYAL_SETTINGS,
    which base.njk injects from src/_data/site.json — the proprietor edits those
@@ -8,7 +8,7 @@
 
 const RHEMROYAL_CONFIG = Object.assign({
   whatsappNumber: "REPLACE_WITH_WHATSAPP_NUMBER",
-  whatsappMessage: "Hello Rhemroyal Services, I'd like to find out more about your consultancy support.",
+  whatsappMessage: "Hello Rhemroyal Business Services, I'd like to find out more about your consultancy support.",
   contactFormEndpoint: "https://formspree.io/f/REPLACE_WITH_FORM_ID",
   newsletterFormEndpoint: "https://formspree.io/f/REPLACE_WITH_NEWSLETTER_FORM_ID"
 }, window.RHEMROYAL_SETTINGS || {});

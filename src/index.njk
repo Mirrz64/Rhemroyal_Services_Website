@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
 title: "Social Development & Business Consultancy"
-description: "Rhemroyal Services helps startups, emerging organisations and growing businesses find clarity, build practical plans and turn goals into measurable progress."
+description: "Rhemroyal Business Services helps startups, emerging organisations and growing businesses find clarity, build practical plans and turn goals into measurable progress."
 navActive: home
 permalink: "index.html"
 ---
@@ -10,7 +10,7 @@ permalink: "index.html"
     <div class="hero-copy">
       <span class="eyebrow">SOCIAL DEVELOPMENT · BUSINESS CONSULTANCY</span>
       <h1>Clarity for today. <span>Growth for tomorrow.</span></h1>
-      <p class="hero-text">Rhemroyal Services helps startups, young organisations and growing businesses rediscover their direction, build practical plans and turn ambitious goals into sustainable progress.</p>
+      <p class="hero-text">Rhemroyal Business Services helps startups, young organisations and growing businesses rediscover their direction, build practical plans and turn ambitious goals into sustainable progress.</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="/contact.html#book">Book a Consultation</a>
         <a class="btn btn-secondary" href="/services.html">Explore Our Services</a>
@@ -35,7 +35,7 @@ permalink: "index.html"
     <div><span class="eyebrow">WHO WE HELP</span><h2>Good ideas deserve a clear path forward.</h2></div>
     <div>
       <p>Many promising businesses and organisations don't fail because the idea is weak. They struggle because the vision is unclear, priorities compete, plans stay on paper, or the team lacks a practical structure for execution.</p>
-      <p>Rhemroyal Services exists to bridge that gap. We combine business consultancy, coaching, training and social development to help people and organisations understand where they are, decide where they want to go, and build a realistic route to get there.</p>
+      <p>Rhemroyal Business Services exists to bridge that gap. We combine business consultancy, coaching, training and social development to help people and organisations understand where they are, decide where they want to go, and build a realistic route to get there.</p>
       <a class="card-link" href="/about.html">More about our story →</a>
     </div>
   </div>
@@ -51,7 +51,10 @@ permalink: "index.html"
       <article class="card"><div class="icon">04 · STRUCTURE</div><h3>Organisational Development</h3><p>Help young and growing organisations strengthen their structure, processes, culture and ability to meet goals.</p><ul><li>Organisational review</li><li>Process improvement</li><li>Performance support</li></ul></article>
       <article class="card"><div class="icon">05 · IMPACT</div><h3>Social Development</h3><p>Support initiatives that aim to create meaningful social impact by connecting people, purpose, planning and sustainable delivery.</p><ul><li>Community initiatives</li><li>Impact planning</li><li>Capacity building</li></ul></article>
       <article class="card"><div class="icon">06 · SCALE</div><h3>Growth Support</h3><p>Practical advisory support for organisations that have started well but need structure to scale without losing their purpose.</p><ul><li>Growth roadmaps</li><li>Review sessions</li><li>Accountability support</li></ul></article>
-      <article class="card featured" style="grid-column:1/-1"><div class="icon">07 · PROPERTY</div><h3>Real Estate Consultancy & General Services</h3><p>Practical guidance for people and organisations weighing up a property decision, plus general support work beyond our core consultancy. We help you think it through, check the right things and work alongside the professionals your decision needs.</p><a class="card-link" href="/services.html#real-estate">See what this covers →</a></article>
+    </div>
+    <div class="cards cards-two" style="margin-top:20px">
+      <article class="card"><div class="icon">07 · PROPERTY</div><h3>Real Estate Consultancy & General Services</h3><p>Practical guidance for people and organisations weighing up a property decision, plus general support work beyond our core consultancy. We help you think it through, check the right things and work alongside the professionals your decision needs.</p><a class="card-link" href="/services.html#real-estate">See what this covers →</a></article>
+      <article class="card"><div class="icon">08–09 · TECHNOLOGY</div><h3>Web, Software & App Development</h3><p>We design and build websites, software and apps around how your organisation actually works, then hand over something you can run and update yourself.</p><a class="card-link" href="/services.html#web-development">See what this covers →</a></article>
     </div>
     <p style="margin-top:36px"><a class="card-link" href="/services.html">See how each service works →</a></p>
   </div>
@@ -80,14 +83,26 @@ permalink: "index.html"
   </div>
 </section>
 
+<section class="section cream">
+  <div class="container">
+    <div class="section-heading"><span class="eyebrow">OUR WORK IN ACTION</span><h2>Learning, planning and building together.</h2><p>Training sessions and conversations with the organisations we work with.</p></div>
+    <div class="gallery-grid">
+      {% for p in gallery.photos | limit(3) %}
+      <figure class="gallery-item"><img src="{{ p.image }}" alt="{{ p.alt }}" width="1000" height="750" loading="lazy" />{% if p.caption %}<figcaption>{{ p.caption }}</figcaption>{% endif %}</figure>
+      {% endfor %}
+    </div>
+    <p style="margin-top:28px"><a class="card-link" href="/case-studies.html#in-the-room">See more from our sessions →</a></p>
+  </div>
+</section>
+
 <section class="section pale">
   <div class="container">
     <div class="section-heading"><span class="eyebrow">WHAT CLIENTS SAY</span><h2>Feedback from people we've worked with.</h2></div>
     <div class="testimonial-grid">
       {% for t in testimonials.testimonials %}
       <article class="testimonial">
-        <div class="stars">★★★★★</div>
         <p>"{{ t.quote }}"</p>
+        {% if t.fullQuote %}<a class="card-link" href="/case-studies.html#testimonials">Read the full testimonial →</a>{% endif %}
         <div class="testimonial-author"><div class="author-avatar">{{ t.initial }}</div><div><div class="author-name">{{ t.name }}</div><div class="author-role">{{ t.role }}</div></div></div>
         {% if t.isPlaceholder %}<span class="placeholder-tag">Sample testimonial — replace with a real quote</span>{% endif %}
       </article>
